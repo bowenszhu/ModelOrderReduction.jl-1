@@ -1,0 +1,4 @@
+name = "ModelOrderReduction"
+uuid = "b6a8b777-4deb-4820-a41b-c8abfea6a91e"
+authors = ["Bowen Zhu <bszhu@fas.harvard.edu>"]
+version = "0.1.0"
