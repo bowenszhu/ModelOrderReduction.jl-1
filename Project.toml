@@ -2,3 +2,7 @@ name = "ModelOrderReduction"
 uuid = "b6a8b777-4deb-4820-a41b-c8abfea6a91e"
 authors = ["Bowen S. Zhu <bszhu@fas.harvard.edu>"]
 version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
