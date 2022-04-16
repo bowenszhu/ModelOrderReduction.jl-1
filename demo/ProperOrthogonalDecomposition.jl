@@ -1,7 +1,7 @@
 using Symbolics, LinearAlgebra
 
-n = 100
 @variables t
+n = 100
 a = randn(n)
 x = exp.(a * t)
 
