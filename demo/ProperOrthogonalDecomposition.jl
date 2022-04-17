@@ -14,5 +14,5 @@ vals, vecs = eigen(covariance; sortby=-)
 using Plots
 plot(vals, markershape=:circle, xticks=1:m, yscale=:log10, legend=false)
 d = 5
-projection = (snapshots * (@. vecs * (1 / √vals)'))'
+projection = (snapshots * (@. vecs[:, 1:d] * (1 / √vals[1:d])'))'
 reduced_model = simplify.(projection * x)
