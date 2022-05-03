@@ -9,8 +9,9 @@ m = 10
 snapshots = Symbolics.value.(mapreduce(tᵢ -> substitute.(x, (Dict(t => tᵢ),)),
                                        hcat,
                                        range(tspan[1], tspan[2], m)))
-covariance = Symmetric(snapshots' * snapshots)
-vals, vecs = eigen(covariance; sortby=-)
+F = svd(snapshots)
+vals = F.S .^ 2
+vecs = F.V
 using Plots
 plot(vals, markershape=:circle, xticks=1:m, yscale=:log10, legend=false)
 d = 5
